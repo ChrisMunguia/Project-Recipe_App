@@ -3,8 +3,8 @@ import Recipe from "./Recipe";
 
 export default function RecipeList({ recipes, deleteRecipe }) {
 	return (
-		<div className="recipe-list">
-			<table>
+		<>
+			<table className="recipe-list">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -21,6 +21,6 @@ export default function RecipeList({ recipes, deleteRecipe }) {
 					))}
 				</tbody>
 			</table>
-		</div>
+		</>
 	);
 }

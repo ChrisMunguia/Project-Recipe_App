@@ -1,22 +1,23 @@
 import React from "react";
 
 export default function Recipe({ recipe, deleteRecipe }) {
+	const { name, cuisine, photo, ingredients, preparation } = recipe;
 	return (
 		<tr>
 			<td className="content_td">
-				<p>{recipe.name}</p>
+				<p>{name}</p>
 			</td>
 			<td className="content_td">
-				<p>{recipe.cuisine}</p>
+				<p>{cuisine}</p>
 			</td>
 			<td>
-				<img src={recipe.photo} alt="Food" />
+				<img src={photo} alt="Food" />
 			</td>
 			<td className="content_td">
-				<p>{recipe.ingredients}</p>
+				<p>{ingredients}</p>
 			</td>
 			<td className="content_td">
-				<p>{recipe.preparation}</p>
+				<p>{preparation}</p>
 			</td>
 			<td>
 				<button name="delete" onClick={deleteRecipe}>
